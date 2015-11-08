@@ -31,6 +31,12 @@ app.listen(port,ip);
 // Routes
 require('./routes/routes.js')(app);
 
+//register
+//reg.register("sohailthebeast@gmail.com",00000001,955961866,"sohail baig",function (found) {
+//    console.log(found);
+//    //res.json(found);
+//});
+
 //Show all users
 User.find({}, function(err, users) {
     var userMap = {};

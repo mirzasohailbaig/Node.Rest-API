@@ -55,6 +55,15 @@ module.exports = function(app) {
         });
     });
 
+    app.post('/account/login',function(req,res){
+        var email = req.body.email;
+        var password = req.body.password;
+
+        login.login(email,password,function (found) {
+            console.log(found);
+            res.json(found);
+        });
+    });
 
 };
 
